@@ -2,7 +2,7 @@ using ETicaretAPI.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddPersistenceServices();
+builder.Services.AddPersistanceServices();
 
 
 
