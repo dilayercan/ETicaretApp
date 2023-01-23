@@ -1,16 +1,15 @@
 ﻿using ETicaretAPI.Domain.Entities.Common;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETicaretAPI.Domain.Entities
+namespace ETicaretAPI.Application.Repository
 {
-    public class Customer:BaseEntity
+    public interface IRepository<T> where T :BaseEntity
     {
-        public string ?Name  { get; set; } 
-        public ICollection<Order> ?Orders { get; set; }
-
+        DbSet<T>Table { get; }
     }
 }
